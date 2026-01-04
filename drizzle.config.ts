@@ -1,7 +1,14 @@
 import type { Config } from "drizzle-kit"
-import "dotenv/config"
+import * as dotenv from "dotenv"
+import * as path from "path"
+
+// Load .env file into process.env
+const envPath = path.resolve(process.cwd(), ".env")
+const result = dotenv.config({ path: envPath })
 
 console.log("Loading database configuration...")
+console.log("ENV file path:", envPath)
+console.log("dotenv result:", result && result.parsed ? Object.keys(result.parsed) : result.error ? result.error.message : "no result")
 
 /**
  * Parse a PostgreSQL connection string (DATABASE_URL) into its components
@@ -10,8 +17,8 @@ console.log("Loading database configuration...")
  */
 function parseDatabaseUrl(url: string) {
   try {
-    // Format: postgres://user:password@host:port/database
-    const regex = /postgres:\/\/([^:]+):([^@]+)@([^:]+):?(\d*)\/([^?]+)(\?.*)?/;
+    // Format: postgres:// or postgresql://user:password@host:port/database
+    const regex = /^postgres(?:ql)?:\/\/([^:]+):([^@]+)@([^:]+):?(\d*)\/([^?]+)(\?.*)?/;
     const match = url.match(regex);
     
     if (!match) {

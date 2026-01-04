@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -200,6 +200,34 @@ export default function SecurityGuidesPage() {
               <CardFooter>
                 <Button variant="outline" className="w-full flex items-center justify-between">
                   <span>Read Guide</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Guide 7: AI Protector Workshop */}
+            <Card className="bg-background border-primary/20 overflow-hidden lg:col-span-1">
+              <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center">
+                <div className="text-center">
+                  <Shield className="h-16 w-16 text-white mx-auto mb-2" />
+                  <p className="text-white font-bold">AI Protector</p>
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle>AI Protector Workshop Guide</CardTitle>
+                <CardDescription>
+                  Securing AI agents, MCP servers, and digital portfolios with Anchal's advanced techniques.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  A comprehensive guide covering secure AI development lifecycle, shift-left security practices, MCP security architecture, 
+                  OAuth 2.1 implementation, WAF/Arcjet hardening, penetration testing with Kali Linux, and executive-ready security reporting.
+                </p>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" className="w-full flex items-center justify-between">
+                  <span>Learn More</span>
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardFooter>

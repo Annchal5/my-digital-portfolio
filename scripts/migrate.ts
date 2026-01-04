@@ -1,9 +1,13 @@
 import { neon } from "@neondatabase/serverless"
+import dotenv from "dotenv"
 import { drizzle } from "drizzle-orm/neon-http"
 import { subscribers, blogPosts } from "../lib/db"
 import { sql } from "drizzle-orm"
 
 async function main() {
+  // Load environment variables from .env so `process.env.DATABASE_URL` is available
+  dotenv.config({ path: new URL("../.env", import.meta.url).pathname })
+
   console.log("Starting database migration...")
 
   // Determine the database connection string

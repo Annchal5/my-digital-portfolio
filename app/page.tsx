@@ -39,8 +39,8 @@ export default async function Home() {
                   Securing Your Digital Future
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Expert cybersecurity solutions to protect your organization from evolving threats. Penetration
-                  testing, security audits, and incident response services.
+                  AI Protector and cybersecurity expert specializing in securing AI agents, MCP servers, and digital portfolios. 
+                  Advanced expertise in shift-left security, penetration testing, and secure development lifecycle.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">

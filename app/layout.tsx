@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className}`} suppressHydrationWarning>
         {/* Include AuthSync component for auto user role assignment */}
         <AuthSync />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
