@@ -550,60 +550,39 @@ export default function AboutPage() {
               </div>
               <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
                 <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Principal Security Consultant</h3>
+                  <h3 className="font-bold text-lg">Cybersecurity Analyst</h3>
                   <time className="font-semibold text-primary flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
-                    2018 - Present
+                    Oct 2022 - Jan 2025
                   </time>
                 </div>
-                <p className="text-muted-foreground mb-2">CyberShield Consulting</p>
-                <p className="text-sm text-muted-foreground">
-                  Leading complex security assessments and penetration tests for Fortune 500 clients. Developing custom
-                  security frameworks and methodologies. Mentoring junior security consultants and delivering executive
-                  briefings on critical security findings.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 bg-background shadow-sm z-10 md:group-odd:ml-8 md:group-even:mr-8">
-                <Briefcase className="h-5 w-5 text-primary" />
-              </div>
-              <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
-                <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Senior Security Engineer</h3>
-                  <time className="font-semibold text-primary flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    2014 - 2018
-                  </time>
-                </div>
-                <p className="text-muted-foreground mb-2">SecureTech Solutions</p>
-                <p className="text-sm text-muted-foreground">
-                  Designed and implemented security architectures for cloud migrations. Led vulnerability management
-                  program and security operations center (SOC) initiatives. Conducted internal security assessments and
-                  developed remediation strategies.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 bg-background shadow-sm z-10 md:group-odd:ml-8 md:group-even:mr-8">
-                <Briefcase className="h-5 w-5 text-primary" />
-              </div>
-              <div className="w-full md:w-[calc(50%-4rem)] bg-background p-5 rounded-lg border border-primary/20 shadow-sm">
-                <div className="flex items-center justify-between space-x-2 mb-1">
-                  <h3 className="font-bold text-lg">Security Analyst</h3>
-                  <time className="font-semibold text-primary flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    2010 - 2014
-                  </time>
-                </div>
-                <p className="text-muted-foreground mb-2">Global Financial Services</p>
-                <p className="text-sm text-muted-foreground">
-                  Performed security monitoring and incident response for a major financial institution. Conducted
-                  vulnerability assessments and security awareness training. Assisted in developing security policies
-                  and procedures.
-                </p>
+                <p className="text-muted-foreground mb-3">KPMG, India</p>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Delivered cybersecurity consulting to enterprise clients, strengthening network security controls and monitoring frameworks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Monitored and analyzed 1,000+ security alerts through SIEM platforms, identifying phishing, malware, and insider threats</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Managed Data Loss Prevention operations, reducing false positives by ~40% through policy tuning</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Conducted vulnerability assessments using Nessus and Qualys, supporting remediation of 100+ vulnerabilities</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Authored 25+ SOPs and technical guides, improving operational efficiency and analyst onboarding</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Assisted with digital forensic investigations and compliance documentation</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
