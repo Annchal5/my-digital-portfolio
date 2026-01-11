@@ -609,6 +609,110 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Awards & Recognition Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Recognition</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Awards & Achievements</h2>
+              <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Recognition for contributions and professional excellence
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 max-w-2xl mx-auto">
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Award className="h-6 w-6 text-primary" />
+                  <div>
+                    <CardTitle>Kudos Award</CardTitle>
+                    <CardDescription>January 2023</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Recognised for consistent performance and reliable technical support at KPMG
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Award className="h-6 w-6 text-primary" />
+                  <div>
+                    <CardTitle>Accolades Award</CardTitle>
+                    <CardDescription>April 2024</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Nominated for contributing to process improvements and reducing system issues
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer & Extracurricular Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Involvement</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Volunteer & Community</h2>
+              <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Active participation in professional communities and technology initiatives
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <CardTitle className="text-lg">KPMG Women in Technology</CardTitle>
+                <CardDescription>2025 - Melbourne</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Selected for the KPMG Women in Technology Program 2025, advancing gender diversity in cybersecurity
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <CardTitle className="text-lg">ACS & AISA Volunteer</CardTitle>
+                <CardDescription>Ongoing</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Active volunteer member of Australian Computer Society (ACS) and Australian Information Security Association (AISA)
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <CardTitle className="text-lg">Hackathons & Workshops</CardTitle>
+                <CardDescription>Ongoing</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Participated in hackathons and AI workshops through APIC Tech & Innovation Club
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
