@@ -1,7 +1,16 @@
+"use client"
+
 import Link from "next/link"
 import { Shield } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export function Footer() {
+  const [year, setYear] = useState<number | null>(null)
+
+  useEffect(() => {
+    setYear(new Date().getFullYear())
+  }, [])
+
   return (
     <footer className="border-t bg-background">
       <div className="container py-8 md:py-12">
@@ -62,7 +71,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CyberShield. All rights reserved.</p>
+          <p>&copy; {year ?? 2026} CyberShield. All rights reserved.</p>
         </div>
       </div>
     </footer>

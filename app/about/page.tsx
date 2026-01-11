@@ -43,7 +43,7 @@ export default function AboutPage() {
                   My approach combines technical expertise in secure AI development lifecycle, shift-left security practices, and defensive engineering with a deep understanding of business needs. I specialize in shift-left security practices, secure coding standards, and environment hardening for AI agents. I believe that cybersecurity is not just about implementing technical controls, but also about building a culture of security awareness and resilience across modern AI systems.
                 </p>
                 <p className="text-muted-foreground">
-                  Throughout my journey, I have developed proficiency in hardening digital portfolios with WAF protections, implementing OAuth 2.1 authentication, and deploying secure MCP server architectures. I am committed to staying at the forefront of the rapidly evolving cybersecurity and AI landscape, delivering executive-ready reports that prove systems are production-safe, and sharing my knowledge with the broader security community.
+                  Throughout my journey in the AI Protector Workshop, I have developed proficiency in hardening digital portfolios with WAF protections, implementing OAuth 2.1 authentication, and deploying secure MCP server architectures. I am committed to staying at the forefront of the rapidly evolving cybersecurity and AI landscape, delivering executive-ready reports that prove systems are production-safe, and sharing my knowledge with the broader security community.
                 </p>
               </div>
             </div>
@@ -374,35 +374,65 @@ export default function AboutPage() {
 
           <div className="mt-12 space-y-8">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-white">Program Outcomes</h3>
+              <h3 className="text-2xl font-bold text-white">My AI Protector Journey</h3>
               <p className="text-gray-400 max-w-[700px] mx-auto">
-                Anchal has developed comprehensive expertise across all key learning areas:
+                Through the AI Protector Workshop, I have acquired comprehensive skills and expertise across three progressive cycles of learning, from security foundations to advanced agent security and professional delivery.
               </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-background/50 border border-primary/20 p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="font-bold text-white mb-3">Key Learning Areas</h4>
+                <h4 className="font-bold text-white mb-4 text-lg">Acquired Technical Skills</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li>✓ Secure AI Development Lifecycle & Shift-Left Security</li>
-                  <li>✓ Cyber Security Bootcamp Integration</li>
-                  <li>✓ MCP Security Architecture & OAuth 2.1</li>
-                  <li>✓ Web Application Security (Next.js, Vercel)</li>
-                  <li>✓ Offensive Security Skills (Kali Linux, Penetration Testing)</li>
-                  <li>✓ Professional Security Reporting & Compliance</li>
+                  <li>✓ <strong>Secure AI Development Lifecycle:</strong> Shift-left security practices and secure coding standards</li>
+                  <li>✓ <strong>MCP Security Architecture:</strong> OAuth 2.1 authentication and secure server deployment</li>
+                  <li>✓ <strong>Web Application Security:</strong> Hardened Next.js portfolios with Vercel Firewall and Clerk auth</li>
+                  <li>✓ <strong>Kali Linux Penetration Testing:</strong> Rate limit evaluation and brute-force testing</li>
+                  <li>✓ <strong>WAF & Arcjet Integration:</strong> Layered defensive security for production systems</li>
+                  <li>✓ <strong>SQL Injection Mitigation:</strong> Secure database query practices and input validation</li>
                 </ul>
               </div>
 
               <div className="bg-background/50 border border-primary/20 p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="font-bold text-white mb-3">Deliverables & Portfolio</h4>
+                <h4 className="font-bold text-white mb-4 text-lg">Professional Deliverables</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li>✓ Hardened Digital Portfolio with WAF & Firewalls</li>
-                  <li>✓ Penetration Testing Playbooks</li>
-                  <li>✓ MCP Authentication Mastery</li>
-                  <li>✓ Compliance-Ready Documentation</li>
-                  <li>✓ Operational Runbooks & Automation</li>
-                  <li>✓ Presentation-Ready Security Portfolio</li>
+                  <li>✓ <strong>Hardened Digital Portfolio:</strong> Production-ready with WAF, Vercel Firewall, and custom domain protections</li>
+                  <li>✓ <strong>Penetration Testing Playbooks:</strong> Documented Kali Linux workflows with repeatable test cases</li>
+                  <li>✓ <strong>Executive Reports:</strong> Compliance-ready documentation and security journey analysis</li>
+                  <li>✓ <strong>MCP Authentication Systems:</strong> OAuth 2.1 secured MCP servers based on industry best practices</li>
+                  <li>✓ <strong>Operational Runbooks:</strong> Incident response procedures and security automation scripts</li>
+                  <li>✓ <strong>Presentation Portfolio:</strong> Executive briefings demonstrating AI agent production readiness</li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="bg-background/50 border border-primary/20 p-6 rounded-lg backdrop-blur-sm mt-6">
+              <h4 className="font-bold text-white mb-4">Key Learning Areas Mastered</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">🛡️ Security Foundations</p>
+                  <p>AI Protector mindset, secure development environment setup, and digital portfolio hardening from the first commit</p>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">🔐 Cyber Security Bootcamp</p>
+                  <p>Penetration testing, threat detection, incident readiness, and Australian case study analysis for contextual threat intelligence</p>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">🌐 MCP Security Architecture</p>
+                  <p>OAuth 2.1 authentication, Arcjet firewall integration, and secure MCP server deployment patterns</p>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">⚔️ Offensive Security Skills</p>
+                  <p>Kali Linux tooling mastery, rate limit evaluation, brute-force testing, and SQL injection mitigation techniques</p>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">📊 Professional Reporting</p>
+                  <p>Executive dashboards, compliance mapping, portfolio-ready security documentation, and operational procedures</p>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <p className="font-semibold text-primary mb-2">🚀 Career Acceleration</p>
+                  <p>Protector mindset development, presentation-ready portfolio, and cyber security specialization for AI agents</p>
+                </div>
               </div>
             </div>
           </div>

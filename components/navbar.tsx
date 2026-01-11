@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Shield, X } from "lucide-react";
@@ -14,13 +14,19 @@ import { useAdmin } from "@/hooks/use-admin";
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { isAdmin } = useAdmin();
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
     { href: "/projects", label: "Projects" },
+    { href: "/security-plan", label: "Security Plan" },
   ];
   
   const adminLink = { 
@@ -56,48 +62,49 @@ export default function Navbar() {
         {/* Mobile Menu Trigger */}
         <div className="flex items-center md:hidden">
           <ThemeToggle />
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="ml-2">
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs">
-              <nav className="flex flex-col gap-4 mt-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                
-                {/* Add Admin link in mobile menu */}
-                {isAdmin && (
-                  <Link
-                    href={adminLink.href}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {adminLink.label}
-                  </Link>
-                )}
-              </nav>
-              <div className="mt-auto pt-6">
-                <SignedOut>
-                  <div className="flex flex-col gap-2">
-                    <SignInButton mode="modal">
-                      <Button variant="outline" className="w-full">Sign In</Button>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <Button className="w-full">Sign Up</Button>
-                    </SignUpButton>
-                  </div>
-                </SignedOut>
+          {mounted ? (
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="ml-2">
+                  {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full max-w-xs">
+                <nav className="flex flex-col gap-4 mt-8">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  
+                  {/* Add Admin link in mobile menu */}
+                  {isAdmin && (
+                    <Link
+                      href={adminLink.href}
+                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {adminLink.label}
+                    </Link>
+                  )}
+                </nav>
+                <div className="mt-auto pt-6">
+                  <SignedOut>
+                    <div className="flex flex-col gap-2">
+                      <SignInButton mode="modal">
+                        <Button variant="outline" className="w-full">Sign In</Button>
+                      </SignInButton>
+                      <SignUpButton mode="modal">
+                        <Button className="w-full">Sign Up</Button>
+                      </SignUpButton>
+                    </div>
+                  </SignedOut>
                 <SignedIn>
                   <div className="flex items-center justify-between">
                     <UserButton afterSignOutUrl="/" />
@@ -109,6 +116,12 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
+          ) : (
+            <Button variant="ghost" size="icon" className="ml-2" disabled>
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          )}
         </div>
 
         {/* Desktop Auth Buttons and Theme Toggle */}

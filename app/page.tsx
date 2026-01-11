@@ -39,8 +39,8 @@ export default async function Home() {
                   Securing Your Digital Future
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  AI Protector and cybersecurity expert specializing in securing AI agents, MCP servers, and digital portfolios. 
-                  Advanced expertise in shift-left security, penetration testing, and secure development lifecycle.
+                  I'm Anchal, an AI Protector and cybersecurity expert specializing in securing AI agents, MCP servers, and digital portfolios. 
+                  I bring advanced expertise in shift-left security, penetration testing, secure development lifecycle, and enterprise AI security architecture.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -291,6 +291,70 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* AI Protector Workshop Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Featured Program</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">AI Protector Specialization</h2>
+              <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                10-Week Immersive Program: Mastering Secure AI Development, MCP Security Architecture, and Offensive Testing
+              </p>
+            </div>
+          </div>
+
+          <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <Shield className="h-10 w-10 text-primary mb-2" />
+                <CardTitle className="text-lg">Secure AI Development</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm text-muted-foreground">
+                <p>• Shift-Left Security Practices</p>
+                <p>• Secure Development Lifecycle</p>
+                <p>• Secure Coding Standards</p>
+                <p>• AI Agent Environment Hardening</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <Server className="h-10 w-10 text-primary mb-2" />
+                <CardTitle className="text-lg">MCP Security Architecture</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm text-muted-foreground">
+                <p>• OAuth 2.1 Authentication</p>
+                <p>• MCP Server Hardening</p>
+                <p>• Arcjet Firewall Integration</p>
+                <p>• Vercel Edge Security</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader>
+                <AlertTriangle className="h-10 w-10 text-primary mb-2" />
+                <CardTitle className="text-lg">Offensive Security Skills</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm text-muted-foreground">
+                <p>• Kali Linux Penetration Testing</p>
+                <p>• SQL Injection Testing</p>
+                <p>• Rate Limit Evaluation</p>
+                <p>• Brute-Force Attack Testing</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <Link href="/about">
+              <Button size="lg" variant="outline">
+                Learn More About My AI Protector Journey
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
@@ -301,7 +365,7 @@ export default async function Home() {
                 Stay Updated on Cybersecurity Trends
               </h2>
               <p className="max-w-[600px] text-gray-400 md:text-xl/relaxed">
-                Subscribe to our newsletter for the latest cybersecurity news, tips, and insights.
+                Subscribe to our newsletter for the latest cybersecurity news, tips, and insights, including AI security best practices.
               </p>
             </div>
             <div className="w-full max-w-md">
