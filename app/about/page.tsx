@@ -48,13 +48,13 @@ export default function AboutPage() {
             <div className="flex items-center justify-center">
               <div className="relative w-full max-w-[400px] aspect-square">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20"></div>
-                <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-background p-2">
+                <div className="relative overflow-hidden rounded-full border border-primary/20 bg-background p-2">
                   <Image
                     src="/anchal-professional.png"
                     alt="Anchal - Cybersecurity Professional & AI Protector"
                     width={500}
                     height={500}
-                    className="rounded-lg object-cover w-full h-full"
+                    className="rounded-full object-cover w-full h-full"
                   />
                 </div>
               </div>
