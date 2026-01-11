@@ -382,9 +382,9 @@ export default async function Home() {
       </section>
 
       {/* Recent Blog Posts */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Blog</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Insights</h2>
@@ -395,11 +395,11 @@ export default async function Home() {
           </div>
 
           {dbError ? (
-            <div className="mx-auto max-w-5xl py-12 text-center">
+            <div className="mx-auto max-w-5xl py-8 text-center">
               <p className="text-muted-foreground">Unable to load blog posts at this time. Please try again later.</p>
             </div>
           ) : (
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-4 py-8 lg:grid-cols-3 lg:gap-8">
               {latestPosts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`} className="group">
                   <Card className="overflow-hidden bg-background border-primary/20 transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
