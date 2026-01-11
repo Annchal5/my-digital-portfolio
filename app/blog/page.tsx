@@ -11,9 +11,9 @@ export default async function BlogPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-black relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Cybersecurity Blog</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
@@ -27,9 +27,9 @@ export default async function BlogPage() {
         <div className="absolute inset-0 bg-black bg-opacity-80"></div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => ( // Type is inferred correctly now
               <Link key={post.id} href={`/blog/${post.slug}`} className="group">
                 <Card className="overflow-hidden h-full transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
