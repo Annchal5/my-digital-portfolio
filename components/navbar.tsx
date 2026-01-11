@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <Shield className="h-6 w-6 text-primary" />
-            <span className="">CyberApp</span>
+            <span className=\"\">Anchal</span>
           </Link>
         </div>        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-5 text-sm font-medium">

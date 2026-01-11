@@ -36,11 +36,10 @@ export default async function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">
-                  Securing Your Digital Future
+                  Cybersecurity Professional & AI Protector
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  I'm Anchal, an AI Protector and cybersecurity expert specializing in securing AI agents, MCP servers, and digital portfolios. 
-                  I bring advanced expertise in shift-left security, penetration testing, secure development lifecycle, and enterprise AI security architecture.
+                  Hi, I'm Anchal. I'm a cybersecurity graduate and former cybersecurity analyst with 2+ years of consulting experience at KPMG supporting enterprise clients across SOC operations, incident response, vulnerability management, and risk assessment. Currently completing my Master's in Information Technology (Cybersecurity) at APIC, Melbourne. I specialize in securing AI agents, MCP servers, penetration testing with Kali Linux, and shift-left security practices.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">

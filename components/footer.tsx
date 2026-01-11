@@ -18,34 +18,29 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold">CyberShield</span>
+              <span className="text-lg font-bold">Anchal</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Professional cybersecurity services to protect your digital assets and infrastructure.
+              Cybersecurity professional specializing in AI security, SOC operations, incident response, and penetration testing. Master's candidate in Cybersecurity at APIC, Melbourne.
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-medium mb-4">Resources</h3>
+            <h3 className="text-sm font-medium mb-4">Connect</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-foreground">
-                  Blog
-                </Link>
+                <a href="https://www.linkedin.com/in/annchal-634291178/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <Link href="/resources/tools" className="text-muted-foreground hover:text-foreground">
-                  Security Tools
-                </Link>
+                <a href="mailto:anchal1234asr@gmail.com" className="text-muted-foreground hover:text-foreground">
+                  Email
+                </a>
               </li>
               <li>
-                <Link href="/resources/guides" className="text-muted-foreground hover:text-foreground">
-                  Security Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/checklists" className="text-muted-foreground hover:text-foreground">
-                  Security Checklists
-                </Link>
+                <a href="tel:+61416401374" className="text-muted-foreground hover:text-foreground">
+                  Call
+                </a>
               </li>
             </ul>
           </div>
@@ -71,7 +66,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {year ?? 2026} CyberShield. All rights reserved.</p>
+          <p>&copy; {year ?? 2026} Anchal. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -12,8 +12,7 @@ export default function AboutPage() {
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">About Me</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
-                Cybersecurity professional with over 15 years of experience protecting organizations from evolving
-                threats.
+                Cybersecurity professional with 2+ years of consulting experience, specializing in SOC operations, incident response, and secure AI systems. AI Protector trained in shift-left security, MCP server architecture, and penetration testing.
               </p>
             </div>
           </div>
@@ -31,19 +30,18 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Anchal</h2>
                 <p className="text-xl text-muted-foreground">
-                  <span className="text-primary font-semibold">AI Protector & Cybersecurity Professional</span>
+                  <span className="text-primary font-semibold">Cybersecurity Graduate & AI Protector</span>
                 </p>
               </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  I am a dedicated cybersecurity professional and AI Protector with a passion for helping organizations strengthen their
-                  security posture and protect their valuable digital assets. Through the AI Protector Workshop—a comprehensive 10-week immersive program—I have developed expertise in securing AI-powered applications, MCP servers, and digital portfolios.
+                  I'm a cybersecurity graduate from Guru Nanak Dev University and a former Cybersecurity Analyst at KPMG India with 2+ years of consulting experience. I've supported enterprise clients across cybersecurity operations, incident response, data loss prevention, vulnerability management, and risk assessment. Currently pursuing a Master of Information Technology (Cybersecurity) at Asia Pacific International College in Melbourne, Australia, with an expected graduation of December 2026.
                 </p>
                 <p className="text-muted-foreground">
-                  My approach combines technical expertise in secure AI development lifecycle, shift-left security practices, and defensive engineering with a deep understanding of business needs. I specialize in shift-left security practices, secure coding standards, and environment hardening for AI agents. I believe that cybersecurity is not just about implementing technical controls, but also about building a culture of security awareness and resilience across modern AI systems.
+                  My professional background includes hands-on experience with SIEM tools, Forcepoint DLP, Nessus, Qualys, and incident response workflows. I have analyzed 1000+ security alerts, managed 50-70 DLP alerts weekly (reducing false positives by ~40%), and supported the remediation of 100+ vulnerabilities. I've authored 25+ SOPs and technical guides, demonstrating my ability to translate complex security concepts into operational documentation.
                 </p>
                 <p className="text-muted-foreground">
-                  Throughout my journey in the AI Protector Workshop, I have developed proficiency in hardening digital portfolios with WAF protections, implementing OAuth 2.1 authentication, and deploying secure MCP server architectures. I am committed to staying at the forefront of the rapidly evolving cybersecurity and AI landscape, delivering executive-ready reports that prove systems are production-safe, and sharing my knowledge with the broader security community.
+                  I recently completed the AI Protector Workshop—a 10-week immersive program—where I developed expertise in securing AI agents, MCP server architecture, penetration testing with Kali Linux, shift-left security practices, and hardened Next.js deployments. I'm passionate about bridging the gap between technical security implementation and business-focused communication, delivering executive-ready reports that prove systems are production-safe.
                 </p>
               </div>
             </div>
@@ -84,12 +82,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>CISSP</CardTitle>
-                <CardDescription>Certified Information Systems Security Professional</CardDescription>
+                <CardTitle>SC-900</CardTitle>
+                <CardDescription>Microsoft Security, Compliance & Identity Fundamentals</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Globally recognized certification demonstrating expertise across eight security domains.
+                  Foundational certification in cloud security, identity management, and compliance frameworks.
                 </p>
               </CardContent>
             </Card>
@@ -99,12 +97,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>OSCP</CardTitle>
-                <CardDescription>Offensive Security Certified Professional</CardDescription>
+                <CardTitle>DLP Administrator</CardTitle>
+                <CardDescription>Forcepoint Data Loss Prevention 9.0</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Hands-on penetration testing certification proving practical exploitation skills.
+                  Expert-level certification in DLP platform deployment, policy management, and alert triage.
                 </p>
               </CardContent>
             </Card>
@@ -114,12 +112,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>CCSP</CardTitle>
-                <CardDescription>Certified Cloud Security Professional</CardDescription>
+                <CardTitle>OCI Foundations</CardTitle>
+                <CardDescription>Oracle Cloud Infrastructure Associate</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Specialized certification in cloud security architecture, design, and operations.
+                  Cloud infrastructure fundamentals with focus on security, networking, and database services.
                 </p>
               </CardContent>
             </Card>
@@ -129,12 +127,42 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>M.S. Cybersecurity</CardTitle>
-                <CardDescription>Stanford University</CardDescription>
+                <CardTitle>Master's IT (Cybersecurity)</CardTitle>
+                <CardDescription>Asia Pacific International College, Melbourne</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Advanced degree with focus on security architecture and threat intelligence.
+                  Graduate degree in cybersecurity with expected completion December 2026.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader className="pb-2">
+                <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Bachelor's CS & Engineering</CardTitle>
+                <CardDescription>Guru Nanak Dev University, India</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Undergraduate degree in Computer Science & Engineering, completed May 2022.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-primary/20">
+              <CardHeader className="pb-2">
+                <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Additional Credentials</CardTitle>
+                <CardDescription>Git & Linux Fundamentals</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Certified in Git Version Control and Linux Administration essentials.
                 </p>
               </CardContent>
             </Card>
@@ -157,50 +185,94 @@ export default function AboutPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">AI Protector Skills</h3>
+              <h3 className="text-xl font-bold">Cybersecurity & Risk</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Secure AI Development Lifecycle</span>
+                  <span>Security Operations Centre (SOC)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Shift-Left Security Practices</span>
+                  <span>Incident Response & Investigation</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>MCP Server Security Architecture</span>
+                  <span>Data Loss Prevention (DLP)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>OAuth 2.1 Authentication</span>
+                  <span>Vulnerability Management</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Hardened Digital Portfolio Deployment</span>
+                  <span>Risk Assessment & Mitigation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Identity & Access Management (IAM)</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Defensive Operations</h3>
+              <h3 className="text-xl font-bold">Tools & Platforms</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>WAF & Arcjet Integration</span>
+                  <span>SIEM Tools & Alert Triage</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Vercel Firewall Hardening</span>
+                  <span>Forcepoint DLP</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Secure Coding Standards</span>
+                  <span>Nessus & Qualys</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
-                  <span>Environment Hardening</span>
+                  <span>Linux Administration</span>
                 </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Git & Version Control</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Oracle Cloud Infrastructure</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">Cloud & Programming</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Cloud Security Fundamentals</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>AWS & Azure (theoretical)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Python & Java</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Kali Linux Penetration Testing</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Network Security & Firewalls</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>HTML, CSS, JavaScript</span>
+                </li>
+              </ul>
+            </div>                </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
                   <span>Threat Modeling & Risk Assessment</span>
