@@ -14,7 +14,7 @@ export default async function BlogPage() {
       <section className="w-full py-8 md:py-16 lg:py-20 bg-black relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-3 text-center">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Cybersecurity Blog</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
                 Insights, tips, and best practices to help you stay secure in an ever-evolving threat landscape.

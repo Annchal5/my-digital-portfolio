@@ -33,8 +33,8 @@ export default async function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-slate-950 via-black to-slate-900 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+            <div className="flex flex-col justify-center space-y-3">
+              <div className="space-y-1">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-primary to-purple-500">
                   Cybersecurity Professional & AI Protector
                 </h1>
@@ -110,8 +110,8 @@ export default async function Home() {
       {/* Services Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
+            <div className="space-y-1">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Projects</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Cybersecurity Solutions</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -190,8 +190,8 @@ export default async function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-background/50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+            <div className="flex flex-col justify-center space-y-3">
+              <div className="space-y-1">
                 <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   2+ Years of Cybersecurity Consulting & AI Security Expertise
@@ -391,7 +391,7 @@ export default async function Home() {
       <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-3 text-center">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Blog</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Insights</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

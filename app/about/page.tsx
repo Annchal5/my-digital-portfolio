@@ -6,10 +6,10 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-black relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
+            <div className="space-y-1">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">About Me</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
                 Cybersecurity professional with 2+ years of consulting experience, specializing in SOC operations, incident response, and secure AI systems. AI Protector trained in shift-left security, MCP server architecture, and penetration testing.
@@ -26,8 +26,8 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
-            <div className="flex flex-col justify-center space-y-6">
-              <div className="space-y-2">
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-1">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Anchal</h2>
                 <p className="text-xl text-muted-foreground">
                   <span className="text-primary font-semibold">Cybersecurity Graduate & AI Protector</span>

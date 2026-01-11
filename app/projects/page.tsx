@@ -25,8 +25,8 @@ export default async function ProjectsPage() {
       <ClientProjectAdmin />
       <section className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-br from-slate-950 via-black to-slate-900 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+          <div className="flex flex-col items-center justify-center space-y-3 text-center">
+            <div className="space-y-1">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Projects</h1>
               <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed">
                 Comprehensive cybersecurity solutions to protect from evolving threats.
