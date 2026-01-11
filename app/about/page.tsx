@@ -46,9 +46,9 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-[400px] aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20"></div>
-                <div className="relative overflow-hidden rounded-full border border-primary/20 bg-background p-2">
+              <div className="relative w-full max-w-[350px] aspect-square">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-2xl opacity-30"></div>
+                <div className="relative overflow-hidden rounded-full border-4 border-primary shadow-2xl">
                   <Image
                     src="/anchal-professional.png"
                     alt="Anchal - Cybersecurity Professional & AI Protector"
