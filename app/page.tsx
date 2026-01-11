@@ -29,69 +29,55 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-slate-950 via-black to-slate-900 relative overflow-hidden">
+      {/* Hero Section - Paperfolio Style: Bold Typography & Minimal Design */}
+      <section className="w-full py-16 md:py-32 lg:py-40 bg-background relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-3">
-              <div className="space-y-1 animate-fade-in">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-primary to-purple-500 animate-pulse">
-                  Cybersecurity Professional & AI Protector
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl animate-fade-in-delay-1">
-                  Hi, I'm Anchal. I'm a cybersecurity graduate and former cybersecurity analyst with 2+ years of consulting experience at KPMG supporting enterprise clients across SOC operations, incident response, vulnerability management, and risk assessment. Currently completing my Master's in Information Technology (Cybersecurity) at APIC, Melbourne. I specialize in securing AI agents, MCP servers, penetration testing with Kali Linux, and shift-left security practices.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row animate-fade-in-delay-2">
-                {/* <Link href="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Get Started
-                  </Button>
-                </Link> */}
-                <Link href="/projects">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105">
-                    Explore Projects
-                  </Button>
-                </Link>
-              </div>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {/* Main Heading - Large & Bold */}
+            <div className="space-y-4 animate-fade-in">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight">
+                I&apos;m{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10 bg-gradient-to-r from-blue-500 via-primary to-purple-600 bg-clip-text text-transparent">
+                    Anchal
+                  </span>
+                  <span className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-primary/20 to-purple-600/20 blur-lg -z-10"></span>
+                </span>
+              </h1>
+              <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-2xl">
+                Cybersecurity Professional & AI Protector
+              </p>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-[500px] aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-2xl">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2 col-span-2">
-                      <div className="h-2 w-[80%] bg-primary/20 rounded-full"></div>
-                      <div className="h-2 w-[60%] bg-primary/20 rounded-full"></div>
-                    </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Lock className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Shield className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Server className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="h-20 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Database className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="space-y-2 col-span-2 mt-2">
-                      <div className="h-2 w-[70%] bg-primary/20 rounded-full"></div>
-                      <div className="h-2 w-[50%] bg-primary/20 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-                </div>
-              </div>
+
+            {/* Subheading with accent */}
+            <div className="space-y-4 animate-fade-in-delay-1 max-w-2xl">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                I&apos;m a cybersecurity graduate with 2+ years of consulting experience at KPMG. I specialize in securing AI agents, MCP servers, penetration testing, and enterprise security operations. Currently completing my Master&apos;s at APIC Melbourne.
+              </p>
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+            </div>
+
+            {/* CTA Buttons - Minimal Style */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-delay-2">
+              <Link href="/cv" className="group">
+                <Button size="lg" className="bg-black hover:bg-gray-900 text-white border border-white/20 hover:border-primary/50 w-full sm:w-auto transition-all duration-300">
+                  <span>View My CV</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Button>
+              </Link>
+              <Link href="/projects" className="group">
+                <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/5 w-full sm:w-auto transition-all duration-300">
+                  <span>Explore Work</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px] opacity-10"></div>
-        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
+
+        {/* Subtle background accent */}
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-600/10 to-blue-500/10 rounded-full blur-3xl opacity-30"></div>
       </section>
 
       {/* Database Error Alert */}
@@ -107,334 +93,233 @@ export default async function Home() {
         </div>
       )}
 
-      {/* Services Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      {/* Services Section - Paperfolio Style */}
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-3 text-center">
-            <div className="space-y-1">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Projects</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Cybersecurity Solutions</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Protect you from cybersecurity attackers.
-              </p>
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Section Header */}
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                What I Offer
+              </h2>
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-600"></div>
             </div>
-          </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300 group-hover:from-red-500/40 group-hover:to-orange-500/40">
-                  <AlertTriangle className="h-10 w-10 text-red-400 transition-transform duration-300 hover:rotate-12" />
-                </div>
-                <CardTitle className="text-lg transition-all duration-300">Penetration Testing</CardTitle>
-                <CardDescription>
-                  Identify vulnerabilities before attackers do with our comprehensive penetration testing services.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Web Application Testing</li>
-                  <li>Network Infrastructure Testing</li>
-                  <li>Mobile Application Testing</li>
-                  <li>Social Engineering Assessments</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300">
-                  <Shield className="h-10 w-10 text-blue-400 transition-transform duration-300 hover:rotate-12" />
-                </div>
-                <CardTitle className="text-lg transition-all duration-300">Security Audits</CardTitle>
-                <CardDescription>
-                  Comprehensive assessment of your security posture against industry standards and best practices.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Compliance Assessments</li>
-                  <li>Security Architecture Review</li>
-                  <li>Cloud Security Assessment</li>
-                  <li>Risk Assessment</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300">
-                  <FileCode className="h-10 w-10 text-green-400 transition-transform duration-300 hover:rotate-12" />
-                </div>
-                <CardTitle className="text-lg transition-all duration-300">Security Training</CardTitle>
-                <CardDescription>
-                  Empower your team with the knowledge to recognize and respond to security threats.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Security Awareness Training</li>
-                  <li>Phishing Simulations</li>
-                  <li>Developer Security Training</li>
-                  <li>Incident Response Drills</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="flex justify-center pt-8">
-            <Link href="/projects">
-              <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0">View All Projects</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Experience Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-background/50">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
-            <div className="flex flex-col justify-center space-y-3">
-              <div className="space-y-1">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  2+ Years of Cybersecurity Consulting & AI Security Expertise
-                </h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  With 2+ years of consulting experience at KPMG and specialized training in AI security, I&apos;ve helped organizations strengthen their security posture across SOC operations, incident response, and emerging AI threats.
+            {/* Services Grid - 3 Column */}
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Penetration Testing */}
+              <div className="space-y-4 group cursor-pointer">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <AlertTriangle className="h-6 w-6 text-red-500" />
+                </div>
+                <h3 className="text-xl font-bold">Penetration Testing</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Identify vulnerabilities before attackers do with comprehensive testing across web applications, networks, and mobile platforms.
                 </p>
               </div>
-              <ul className="grid gap-3 py-4">
-                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <div className="rounded-full bg-gradient-to-br from-cyan-500/30 to-blue-500/30 p-2">
-                    <Shield className="h-4 w-4 text-cyan-400" />
-                  </div>
-                  <span>Certified Information Systems Security Professional (CISSP)</span>
-                </li>
-                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <div className="rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 p-2">
-                    <Shield className="h-4 w-4 text-purple-400" />
-                  </div>
-                  <span>Certified Ethical Hacker (CEH)</span>
-                </li>
-                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <div className="rounded-full bg-gradient-to-br from-orange-500/30 to-red-500/30 p-2">
-                    <Shield className="h-4 w-4 text-orange-400" />
-                  </div>
-                  <span>Offensive Security Certified Professional (OSCP)</span>
-                </li>
-                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <div className="rounded-full bg-gradient-to-br from-green-500/30 to-teal-500/30 p-2">
-                    <Shield className="h-4 w-4 text-green-400" />
-                  </div>
-                  <span>Certified Cloud Security Professional (CCSP)</span>
-                </li>
-              </ul>
-              <div>
-                <Link href="/about">
-                  <Button variant="outline">Learn More About My Experience</Button>
-                </Link>
+
+              {/* Security Audits */}
+              <div className="space-y-4 group cursor-pointer">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="h-6 w-6 text-blue-500" />
+                </div>
+                <h3 className="text-xl font-bold">Security Audits</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Comprehensive assessment of your security posture against industry standards with compliance and cloud security reviews.
+                </p>
+              </div>
+
+              {/* Security Training */}
+              <div className="space-y-4 group cursor-pointer">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <FileCode className="h-6 w-6 text-green-500" />
+                </div>
+                <h3 className="text-xl font-bold">Security Training</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Empower your team with security awareness training, phishing simulations, and incident response readiness.
+                </p>
               </div>
             </div>
-            <div className="flex items-center justify-center lg:justify-end">
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                <div className="grid gap-4">
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/digital-watchtower.png"
-                      width={300}
-                      height={300}
-                      alt="Security monitoring"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/digital-fortress.png"
-                      width={300}
-                      height={300}
-                      alt="Network security"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="grid gap-4">
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/cyber-guardian.png"
-                      width={300}
-                      height={300}
-                      alt="Cybersecurity professional"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/modern-soc-overview.png"
-                      width={300}
-                      height={300}
-                      alt="Security operations center"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="grid gap-4">
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/digital-security-breach.png"
-                      width={300}
-                      height={300}
-                      alt="Penetration testing"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
-                    <Image
-                      src="/interconnected-threat-analysis.png"
-                      width={300}
-                      height={300}
-                      alt="Cyber threat intelligence"
-                      className="aspect-square rounded-md object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* AI Protector Workshop Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Featured Program</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">AI Protector Specialization</h2>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                10-Week Immersive Program: Mastering Secure AI Development, MCP Security Architecture, and Offensive Testing
-              </p>
-            </div>
-          </div>
-
-          <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
-            <Card className="bg-background border-primary/20">
-              <CardHeader>
-                <Shield className="h-10 w-10 text-primary mb-2" />
-                <CardTitle className="text-lg">Secure AI Development</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
-                <p>• Shift-Left Security Practices</p>
-                <p>• Secure Development Lifecycle</p>
-                <p>• Secure Coding Standards</p>
-                <p>• AI Agent Environment Hardening</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-primary/20">
-              <CardHeader>
-                <Server className="h-10 w-10 text-primary mb-2" />
-                <CardTitle className="text-lg">MCP Security Architecture</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
-                <p>• OAuth 2.1 Authentication</p>
-                <p>• MCP Server Hardening</p>
-                <p>• Arcjet Firewall Integration</p>
-                <p>• Vercel Edge Security</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-primary/20">
-              <CardHeader>
-                <AlertTriangle className="h-10 w-10 text-primary mb-2" />
-                <CardTitle className="text-lg">Offensive Security Skills</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
-                <p>• Kali Linux Penetration Testing</p>
-                <p>• SQL Injection Testing</p>
-                <p>• Rate Limit Evaluation</p>
-                <p>• Brute-Force Attack Testing</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <Link href="/about">
-              <Button size="lg" variant="outline">
-                Learn More About My AI Protector Journey
+            <Link href="/projects" className="inline-block pt-4">
+              <Button className="border border-primary/50 hover:bg-primary/5 bg-transparent text-foreground">
+                <span>View All Services</span>
+                <span className="ml-2">→</span>
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
-        <div className="container px-4 md:px-6 relative z-10">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Newsletter</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                Stay Updated on Cybersecurity Trends
+      {/* Experience Section - Paperfolio Style */}
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-background">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Section Header */}
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                Experience
               </h2>
-              <p className="max-w-[600px] text-gray-400 md:text-xl/relaxed">
-                Subscribe to our newsletter for the latest cybersecurity news, tips, and insights, including AI security best practices.
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                2+ years of consulting experience at KPMG supporting enterprise clients across SOC operations, incident response, and emerging AI security threats.
               </p>
             </div>
-            <div className="w-full max-w-md">
-              <NewsletterForm />
+
+            {/* Highlights Grid */}
+            <div className="grid gap-6 md:grid-cols-3 py-8">
+              <div className="border-l-2 border-primary/50 pl-4 space-y-2">
+                <p className="text-sm font-medium text-primary">2+ Years</p>
+                <p className="text-muted-foreground">Cybersecurity Consulting at KPMG</p>
+              </div>
+              <div className="border-l-2 border-primary/50 pl-4 space-y-2">
+                <p className="text-sm font-medium text-primary">Master&apos;s in Progress</p>
+                <p className="text-muted-foreground">Information Technology (Cybersecurity)</p>
+              </div>
+              <div className="border-l-2 border-primary/50 pl-4 space-y-2">
+                <p className="text-sm font-medium text-primary">4+ Certifications</p>
+                <p className="text-muted-foreground">SC-900, DLP 9.0, Oracle Cloud, AI Protector</p>
+              </div>
             </div>
+
+            <Link href="/cv" className="inline-block">
+              <Button className="border border-primary/50 hover:bg-primary/5 bg-transparent text-foreground">
+                <span>View Full CV</span>
+                <span className="ml-2">→</span>
+              </Button>
+            </Link>
           </div>
         </div>
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px] opacity-10"></div>
-        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
       </section>
 
-      {/* Recent Blog Posts */}
-      <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
+      {/* AI Protector Specialization Section */}
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-3 text-center">
-            <div className="space-y-1">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Blog</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Insights</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Stay informed with our latest articles on cybersecurity trends, threats, and best practices.
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Section Header */}
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                AI Protector Specialization
+              </h2>
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                10-week immersive program mastering secure AI development, MCP security architecture, and offensive security testing.
               </p>
             </div>
-          </div>
 
-          {dbError ? (
-            <div className="mx-auto max-w-5xl py-8 text-center">
-              <p className="text-muted-foreground">Unable to load blog posts at this time. Please try again later.</p>
-            </div>
-          ) : (
-            <div className="mx-auto grid max-w-5xl items-center gap-4 py-8 lg:grid-cols-3 lg:gap-8">
-              {latestPosts.map((post, index) => (
-                <Link key={post.id} href={`/blog/${post.slug}`} className="group">
-                  <Card className="overflow-hidden bg-background border-primary/20 transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg group-hover:-translate-y-2 hover:scale-105 cursor-pointer" style={{animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`}}>
-                    <div className="aspect-video w-full overflow-hidden">
-                      <Image
-                        src={post.coverImage || "/placeholder.svg?height=400&width=600&query=cybersecurity"}
-                        width={600}
-                        height={400}
-                        alt={post.title}
-                        className="object-cover transition-all duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="transition-all duration-300 group-hover:text-primary">{post.title}</CardTitle>
-                      <CardDescription className="transition-all duration-300 group-hover:text-muted-foreground/80">{post.excerpt}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{formatDate(post.createdAt)}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          )}
+            {/* Three Focus Areas */}
+            <div className="grid gap-8 md:grid-cols-3 py-8">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-lg">Secure AI Development</h3>
+                <p className="text-sm text-muted-foreground">Shift-left security, secure SDLC, hardened AI agents</p>
+              </div>
 
-          <div className="flex justify-center pt-4">
-            <Link href="/blog">
-              <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">View All Articles</Button>
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <Server className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-lg">MCP Security</h3>
+                <p className="text-sm text-muted-foreground">OAuth 2.1, server hardening, edge security</p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <AlertTriangle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-lg">Offensive Skills</h3>
+                <p className="text-sm text-muted-foreground">Penetration testing, Kali Linux, vulnerability assessment</p>
+              </div>
+            </div>
+
+            <Link href="/about" className="inline-block">
+              <Button className="border border-primary/50 hover:bg-primary/5 bg-transparent text-foreground">
+                <span>Learn About AI Protector</span>
+                <span className="ml-2">→</span>
+              </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles Section */}
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-background">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Section Header */}
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                Latest Insights
+              </h2>
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+              <p className="text-lg text-muted-foreground">
+                Articles on cybersecurity trends, AI security, and best practices.
+              </p>
+            </div>
+
+            {/* Blog Posts Grid */}
+            {dbError ? (
+              <div className="py-8 text-center">
+                <p className="text-muted-foreground">Unable to load articles. Please try again later.</p>
+              </div>
+            ) : (
+              <>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 py-8">
+                  {latestPosts.map((post, index) => (
+                    <Link key={post.id} href={`/blog/${post.slug}`} className="group">
+                      <div className="space-y-3 h-full">
+                        <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
+                          <Image
+                            src={post.coverImage || "/placeholder.svg?height=400&width=600&query=cybersecurity"}
+                            width={600}
+                            height={400}
+                            alt={post.title}
+                            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
+                            {post.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground line-clamp-2">
+                            {post.excerpt}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {formatDate(post.createdAt)}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+
+                <Link href="/blog" className="inline-block">
+                  <Button className="border border-primary/50 hover:bg-primary/5 bg-transparent text-foreground">
+                    <span>Read All Articles</span>
+                    <span className="ml-2">→</span>
+                  </Button>
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter CTA Section */}
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-muted/30">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-2xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                Stay Updated
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Get the latest cybersecurity insights and AI security best practices delivered to your inbox.
+              </p>
+            </div>
+            <NewsletterForm />
           </div>
         </div>
       </section>
