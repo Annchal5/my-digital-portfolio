@@ -272,7 +272,23 @@ export default function AboutPage() {
                   <span>HTML, CSS, JavaScript</span>
                 </li>
               </ul>
-            </div>                </li>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold\">Professional & Consulting</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary\" />
+                  <span>Client Engagement & Communication</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Business & Technical Documentation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
+                  <span>Process Improvement</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-primary" />
                   <span>Threat Modeling & Risk Assessment</span>
