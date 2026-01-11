@@ -48,25 +48,27 @@ export default async function ProjectsPage() {
               const IconComponent = iconMap[project.icon as keyof typeof iconMap] || Shield; 
               
               return (
-                <Card key={project.id} className="bg-background border-primary/20">
-                  <CardHeader>
-                    <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4">
-                      <IconComponent className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {project.items.map((item, i) => ( 
-                        <li key={i} className="flex items-center gap-2">
-                          <Shield className="h-4 w-4 text-primary" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div key={project.id} className="group cursor-pointer">
+                  <Card className="bg-background border-primary/20 h-full transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
+                    <CardHeader>
+                      <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4 transition-all duration-200 group-hover:bg-primary/20">
+                        <IconComponent className="h-8 w-8 text-primary transition-all duration-200 group-hover:scale-110" />
+                      </div>
+                      <CardTitle className="transition-all duration-200 group-hover:text-primary">{project.title}</CardTitle>
+                      <CardDescription>{project.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 mb-6">
+                        {project.items.map((item, i) => ( 
+                          <li key={i} className="flex items-center gap-2 transition-all duration-200 group-hover:translate-x-1">
+                            <Shield className="h-4 w-4 text-primary" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
               )
             })}
           </div>
