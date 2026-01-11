@@ -23,7 +23,7 @@ export default async function ProjectsPage() {
     <div className="flex flex-col">
       {/* Admin section for adding new projects - only visible to admins */}
       <ClientProjectAdmin />
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-br from-slate-950 via-black to-slate-900 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -38,9 +38,9 @@ export default async function ProjectsPage() {
         <div className="absolute inset-0 bg-black bg-opacity-80"></div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section className="w-full py-8 md:py-16 lg:py-20 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Ensure projects is an array before mapping */}
             {Array.isArray(projects) && projects.map((project) => {
               // Type guard for items remains useful if the action could potentially return non-array items
@@ -49,12 +49,12 @@ export default async function ProjectsPage() {
               
               return (
                 <div key={project.id} className="group cursor-pointer">
-                  <Card className="bg-background border-primary/20 h-full transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
+                  <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 h-full transition-all duration-300 group-hover:border-primary/70 group-hover:shadow-lg group-hover:shadow-primary/20">
                     <CardHeader>
-                      <div className="bg-primary/10 p-3 w-fit rounded-lg mb-4 transition-all duration-200 group-hover:bg-primary/20">
-                        <IconComponent className="h-8 w-8 text-primary transition-all duration-200 group-hover:scale-110" />
+                      <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-3 w-fit rounded-lg mb-4 transition-all duration-200 group-hover:from-cyan-500/40 group-hover:to-blue-500/40">
+                        <IconComponent className="h-8 w-8 text-cyan-400 transition-all duration-200 group-hover:scale-110" />
                       </div>
-                      <CardTitle className="transition-all duration-200 group-hover:text-primary">{project.title}</CardTitle>
+                      <CardTitle className="transition-all duration-200 group-hover:text-primary text-lg">{project.title}</CardTitle>
                       <CardDescription>{project.description}</CardDescription>
                     </CardHeader>
                     <CardContent>

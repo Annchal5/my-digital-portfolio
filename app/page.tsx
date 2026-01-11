@@ -30,12 +30,12 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black relative overflow-hidden">
+      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-slate-950 via-black to-slate-900 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-primary to-purple-500">
                   Cybersecurity Professional & AI Protector
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -49,8 +49,8 @@ export default async function Home() {
                   </Button>
                 </Link> */}
                 <Link href="/projects">
-                  <Button size="lg" variant="outline">
-                    Learn More
+                  <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0">
+                    Explore Projects
                   </Button>
                 </Link>
               </div>
@@ -120,10 +120,12 @@ export default async function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-            <Card className="bg-background border-primary/20">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
               <CardHeader>
-                <AlertTriangle className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Penetration Testing</CardTitle>
+                <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 p-3 w-fit rounded-lg mb-2">
+                  <AlertTriangle className="h-10 w-10 text-red-400" />
+                </div>
+                <CardTitle className="text-lg">Penetration Testing</CardTitle>
                 <CardDescription>
                   Identify vulnerabilities before attackers do with our comprehensive penetration testing services.
                 </CardDescription>
@@ -137,10 +139,12 @@ export default async function Home() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-background border-primary/20">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
               <CardHeader>
-                <Shield className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Security Audits</CardTitle>
+                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-3 w-fit rounded-lg mb-2">
+                  <Shield className="h-10 w-10 text-blue-400" />
+                </div>
+                <CardTitle className="text-lg">Security Audits</CardTitle>
                 <CardDescription>
                   Comprehensive assessment of your security posture against industry standards and best practices.
                 </CardDescription>
@@ -154,10 +158,12 @@ export default async function Home() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-background border-primary/20">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
               <CardHeader>
-                <FileCode className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Security Training</CardTitle>
+                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-3 w-fit rounded-lg mb-2">
+                  <FileCode className="h-10 w-10 text-green-400" />
+                </div>
+                <CardTitle className="text-lg">Security Training</CardTitle>
                 <CardDescription>
                   Empower your team with the knowledge to recognize and respond to security threats.
                 </CardDescription>
@@ -172,16 +178,16 @@ export default async function Home() {
               </CardContent>
             </Card>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-8">
             <Link href="/projects">
-              <Button variant="outline">View All Projects</Button>
+              <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0">View All Projects</Button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-background/50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
             <div className="flex flex-col justify-center space-y-4">
@@ -194,28 +200,28 @@ export default async function Home() {
                   With 2+ years of consulting experience at KPMG and specialized training in AI security, I&apos;ve helped organizations strengthen their security posture across SOC operations, incident response, and emerging AI threats.
                 </p>
               </div>
-              <ul className="grid gap-2 py-4">
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
+              <ul className="grid gap-3 py-4">
+                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
+                  <div className="rounded-full bg-gradient-to-br from-cyan-500/30 to-blue-500/30 p-2">
+                    <Shield className="h-4 w-4 text-cyan-400" />
                   </div>
                   <span>Certified Information Systems Security Professional (CISSP)</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
+                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
+                  <div className="rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 p-2">
+                    <Shield className="h-4 w-4 text-purple-400" />
                   </div>
                   <span>Certified Ethical Hacker (CEH)</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
+                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
+                  <div className="rounded-full bg-gradient-to-br from-orange-500/30 to-red-500/30 p-2">
+                    <Shield className="h-4 w-4 text-orange-400" />
                   </div>
                   <span>Offensive Security Certified Professional (OSCP)</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
+                <li className="flex items-center gap-2 p-2 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
+                  <div className="rounded-full bg-gradient-to-br from-green-500/30 to-teal-500/30 p-2">
+                    <Shield className="h-4 w-4 text-green-400" />
                   </div>
                   <span>Certified Cloud Security Professional (CCSP)</span>
                 </li>
