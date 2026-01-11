@@ -31,28 +31,30 @@ export default async function BlogPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => ( // Type is inferred correctly now
-              <Card key={post.id} className="overflow-hidden">
-                {post.coverImage && ( // Use coverImage instead of imageUrl
-                  <Link href={`/blog/${post.slug}`}>
-                    <Image
-                      src={post.coverImage} // Use coverImage
-                      alt={post.title}
-                      width={400}
-                      height={225}
-                      className="w-full h-48 object-cover"
-                    />
-                  </Link>
-                )}
-                <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
-                  {/* Excerpt is not nullable in the schema, so no need for null check */}
-                  <CardDescription>{post.excerpt}</CardDescription>
-                </CardHeader>
-                <CardContent className="mt-auto">
-                  {/* Ensure formatDate handles Date | null if createdAt can be null */}
-                  <p className="text-sm text-muted-foreground">{post.createdAt ? formatDate(post.createdAt) : 'Date unavailable'}</p>
-                </CardContent>
-              </Card>
+              <Link key={post.id} href={`/blog/${post.slug}`} className="group">
+                <Card className="overflow-hidden h-full transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
+                  {post.coverImage && ( // Use coverImage instead of imageUrl
+                    <div className="overflow-hidden">
+                      <Image
+                        src={post.coverImage} // Use coverImage
+                        alt={post.title}
+                        width={400}
+                        height={225}
+                        className="w-full h-48 object-cover transition-all duration-200 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle>{post.title}</CardTitle>
+                    {/* Excerpt is not nullable in the schema, so no need for null check */}
+                    <CardDescription>{post.excerpt}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="mt-auto">
+                    {/* Ensure formatDate handles Date | null if createdAt can be null */}
+                    <p className="text-sm text-muted-foreground">{post.createdAt ? formatDate(post.createdAt) : 'Date unavailable'}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
