@@ -68,14 +68,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
 
-      <div className="container px-4 md:px-6 -mt-20 relative z-10">
-        <div className="max-w-3xl mx-auto bg-background rounded-lg shadow-lg p-6 md:p-10 border border-border">
-          <Link href="/blog">
-            <Button variant="ghost" size="sm" className="mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
-            </Button>
-          </Link>
+      <div className="w-full bg-background">
+        <div className="container px-4 md:px-6 -mt-20 relative z-10">
+          <div className="max-w-3xl mx-auto bg-background rounded-lg shadow-lg p-6 md:p-10 border border-border">
+            <Link href="/blog">
+              <Button variant="ghost" size="sm" className="mb-4">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Blog
+              </Button>
+            </Link>
 
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{post.title}</h1>
 
@@ -100,10 +101,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             className="mt-8 prose prose-gray dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: await marked(post.content) }}
           />
+          </div>
         </div>
       </div>
 
-      <section className="w-full py-12 md:py-24 bg-muted/40">
+      <section className="w-full py-12 md:py-20 bg-muted/40">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
