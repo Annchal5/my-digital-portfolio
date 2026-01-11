@@ -219,20 +219,39 @@ export default function CVPage() {
               </div>
 
               <div className="relative animate-fade-in-delay-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-3xl opacity-20 animate-pulse"></div>
+                {/* Animated gradient background glow */}
+                <div className="absolute -inset-2 bg-gradient-to-br from-blue-400 via-purple-500 to-blue-600 rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-gradient-to-tr from-purple-400 to-blue-400 rounded-3xl blur-xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                
                 <div className="relative">
-                  <Image
-                    src="/anchal-professional.png"
-                    width={400}
-                    height={400}
-                    alt="Anchal"
-                    className="rounded-2xl border-4 border-blue-500/20 shadow-2xl object-cover hover:border-blue-500/50 transition-all duration-300 w-full"
-                  />
-                  <div className="absolute -bottom-6 left-6 right-6 bg-background/90 backdrop-blur-lg rounded-xl p-4 border border-blue-500/20 shadow-lg">
-                    <p className="font-semibold text-lg mb-2">Current Focus</p>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/50">AI Security</Badge>
-                      <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/50">MCP Architecture</Badge>
+                  {/* Decorative corner elements */}
+                  <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-blue-400 rounded-lg opacity-60"></div>
+                  <div className="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-purple-500 rounded-lg opacity-60"></div>
+                  <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-purple-500 rounded-lg opacity-60"></div>
+                  <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-blue-400 rounded-lg opacity-60"></div>
+                  
+                  {/* Main image with enhanced styling */}
+                  <div className="relative overflow-hidden rounded-3xl border-2 border-blue-400/40 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:border-purple-400/60 group">
+                    <Image
+                      src="/anchal-professional.png"
+                      width={400}
+                      height={400}
+                      alt="Anchal"
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+
+                  {/* Enhanced status badge with floating animation */}
+                  <div className="absolute -bottom-4 left-6 right-6 bg-gradient-to-r from-blue-500/95 to-purple-600/95 backdrop-blur-xl rounded-2xl p-5 border-2 border-blue-400/50 shadow-2xl hover:shadow-purple-500/60 transition-all duration-300 hover:-translate-y-2 transform animate-float">
+                    <p className="font-semibold text-lg text-white mb-3 flex items-center gap-2">
+                      <span className="inline-block w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+                      Currently Focused On
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Badge className="bg-white/20 text-blue-100 border-blue-300/50 hover:bg-white/30 transition-all cursor-default font-medium">🔒 AI Security</Badge>
+                      <Badge className="bg-white/20 text-blue-100 border-blue-300/50 hover:bg-white/30 transition-all cursor-default font-medium">⚙️ MCP Architecture</Badge>
                     </div>
                   </div>
                 </div>
