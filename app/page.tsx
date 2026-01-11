@@ -172,6 +172,11 @@ export default async function Home() {
               </CardContent>
             </Card>
           </div>
+          <div className="flex justify-center">
+            <Link href="/projects">
+              <Button variant="outline">View All Projects</Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -183,11 +188,10 @@ export default async function Home() {
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  15+ Years of Cybersecurity Expertise
+                  2+ Years of Cybersecurity Consulting & AI Security Expertise
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  With extensive experience in the cybersecurity industry, I&apos;ve helped organizations of all sizes
-                  protect their digital assets and infrastructure.
+                  With 2+ years of consulting experience at KPMG and specialized training in AI security, I&apos;ve helped organizations strengthen their security posture across SOC operations, incident response, and emerging AI threats.
                 </p>
               </div>
               <ul className="grid gap-2 py-4">
