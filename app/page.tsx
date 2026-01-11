@@ -34,22 +34,22 @@ export default async function Home() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-3">
-              <div className="space-y-1">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-primary to-purple-500">
+              <div className="space-y-1 animate-fade-in">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-primary to-purple-500 animate-pulse">
                   Cybersecurity Professional & AI Protector
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl animate-fade-in-delay-1">
                   Hi, I'm Anchal. I'm a cybersecurity graduate and former cybersecurity analyst with 2+ years of consulting experience at KPMG supporting enterprise clients across SOC operations, incident response, vulnerability management, and risk assessment. Currently completing my Master's in Information Technology (Cybersecurity) at APIC, Melbourne. I specialize in securing AI agents, MCP servers, penetration testing with Kali Linux, and shift-left security practices.
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <div className="flex flex-col gap-2 min-[400px]:flex-row animate-fade-in-delay-2">
                 {/* <Link href="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
                     Get Started
                   </Button>
                 </Link> */}
                 <Link href="/projects">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0">
+                  <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105">
                     Explore Projects
                   </Button>
                 </Link>
@@ -120,12 +120,12 @@ export default async function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 p-3 w-fit rounded-lg mb-2">
-                  <AlertTriangle className="h-10 w-10 text-red-400" />
+                <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300 group-hover:from-red-500/40 group-hover:to-orange-500/40">
+                  <AlertTriangle className="h-10 w-10 text-red-400 transition-transform duration-300 hover:rotate-12" />
                 </div>
-                <CardTitle className="text-lg">Penetration Testing</CardTitle>
+                <CardTitle className="text-lg transition-all duration-300">Penetration Testing</CardTitle>
                 <CardDescription>
                   Identify vulnerabilities before attackers do with our comprehensive penetration testing services.
                 </CardDescription>
@@ -139,12 +139,12 @@ export default async function Home() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-3 w-fit rounded-lg mb-2">
-                  <Shield className="h-10 w-10 text-blue-400" />
+                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300">
+                  <Shield className="h-10 w-10 text-blue-400 transition-transform duration-300 hover:rotate-12" />
                 </div>
-                <CardTitle className="text-lg">Security Audits</CardTitle>
+                <CardTitle className="text-lg transition-all duration-300">Security Audits</CardTitle>
                 <CardDescription>
                   Comprehensive assessment of your security posture against industry standards and best practices.
                 </CardDescription>
@@ -158,12 +158,12 @@ export default async function Home() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+            <Card className="bg-gradient-to-br from-background to-background/50 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 cursor-pointer">
               <CardHeader>
-                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-3 w-fit rounded-lg mb-2">
-                  <FileCode className="h-10 w-10 text-green-400" />
+                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-3 w-fit rounded-lg mb-2 transition-all duration-300">
+                  <FileCode className="h-10 w-10 text-green-400 transition-transform duration-300 hover:rotate-12" />
                 </div>
-                <CardTitle className="text-lg">Security Training</CardTitle>
+                <CardTitle className="text-lg transition-all duration-300">Security Training</CardTitle>
                 <CardDescription>
                   Empower your team with the knowledge to recognize and respond to security threats.
                 </CardDescription>
@@ -406,21 +406,21 @@ export default async function Home() {
             </div>
           ) : (
             <div className="mx-auto grid max-w-5xl items-center gap-4 py-8 lg:grid-cols-3 lg:gap-8">
-              {latestPosts.map((post) => (
+              {latestPosts.map((post, index) => (
                 <Link key={post.id} href={`/blog/${post.slug}`} className="group">
-                  <Card className="overflow-hidden bg-background border-primary/20 transition-all duration-200 group-hover:border-primary/50 group-hover:shadow-md">
+                  <Card className="overflow-hidden bg-background border-primary/20 transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg group-hover:-translate-y-2 hover:scale-105 cursor-pointer" style={{animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`}}>
                     <div className="aspect-video w-full overflow-hidden">
                       <Image
                         src={post.coverImage || "/placeholder.svg?height=400&width=600&query=cybersecurity"}
                         width={600}
                         height={400}
                         alt={post.title}
-                        className="object-cover transition-all duration-200 group-hover:scale-105"
+                        className="object-cover transition-all duration-300 group-hover:scale-110"
                       />
                     </div>
                     <CardHeader>
-                      <CardTitle>{post.title}</CardTitle>
-                      <CardDescription>{post.excerpt}</CardDescription>
+                      <CardTitle className="transition-all duration-300 group-hover:text-primary">{post.title}</CardTitle>
+                      <CardDescription className="transition-all duration-300 group-hover:text-muted-foreground/80">{post.excerpt}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">{formatDate(post.createdAt)}</p>
@@ -431,9 +431,9 @@ export default async function Home() {
             </div>
           )}
 
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-4">
             <Link href="/blog">
-              <Button variant="outline">View All Articles</Button>
+              <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">View All Articles</Button>
             </Link>
           </div>
         </div>
