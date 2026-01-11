@@ -58,14 +58,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="flex flex-col">
-      <div className="w-full h-[400px] relative bg-black">
+      <div className="w-full h-[450px] relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-black">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        {/* Cover Image */}
         <Image
           src={post.coverImage || "/placeholder.svg?height=600&width=1200&query=cybersecurity"}
           fill
           alt={post.title}
-          className="object-cover opacity-70"
+          className="object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40"></div>
       </div>
 
       <div className="w-full bg-background">
