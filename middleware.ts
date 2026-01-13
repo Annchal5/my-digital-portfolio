@@ -1,10 +1,13 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+
+const isProtectedRoute = createRouteMatcher([
+  '/admin(.*)',
+  '/resources(.*)',
+  '/projects(.*)',
+]);
 
 export default clerkMiddleware(async (auth, req) => {
-  // Protect admin and resources routes
-  if (req.nextUrl.pathname.startsWith('/admin') || 
-      req.nextUrl.pathname.startsWith('/resources') ||
-      req.nextUrl.pathname.startsWith('/projects')) {
+  if (isProtectedRoute(req)) {
     await auth.protect();
   }
 });
