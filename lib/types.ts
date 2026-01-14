@@ -79,6 +79,8 @@ export const blogPostInsertSchema = createInsertSchema(blogPosts);
 export const projectSchema = createSelectSchema(projects).extend({
   // Handle JSON data for items array
   items: z.array(z.string()),
+  // Optional image field for project cover image
+  image: z.string().nullable().optional(),
   // Ensure proper type handling for dates from DB - Use camelCase to match Drizzle schema
   createdAt: z.date().nullable(),
   updatedAt: z.date().nullable(),
@@ -87,6 +89,8 @@ export const projectSchema = createSelectSchema(projects).extend({
 export const projectInsertSchema = createInsertSchema(projects).extend({
   // Ensure items is always an array of strings
   items: z.array(z.string()),
+  // Optional image field
+  image: z.string().nullable().optional(),
 });
 
 /**
@@ -96,6 +100,7 @@ export const projectCreateInputSchema = z.object({
   title: z.string(),
   description: z.string(),
   icon: z.string(),
+  image: z.string().nullable().optional(),
   items: z.array(z.string()),
 });
 

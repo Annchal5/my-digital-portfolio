@@ -74,6 +74,7 @@ export const projects = pgTable("projects", {
   title: text("title").notNull(),
   description: text("description").notNull(),
   icon: text("icon").notNull(), // Store the icon name as a string
+  image: text("image"), // Store image URL/path for the project
   items: json("items").notNull(), // Store items as a JSON array
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),

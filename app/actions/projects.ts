@@ -2,7 +2,7 @@
 
 import { db, projects } from "@/lib/db";
 import { isAdmin } from "@/lib/auth";
-import { asc } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { 
@@ -26,6 +26,7 @@ export async function getProjects(): Promise<Project[]> {
       title: project.title,
       description: project.description,
       icon: project.icon,
+      image: project.image, // Include image field
       items: project.items, // items should already be parsed correctly if stored as JSON
       createdAt: project.createdAt, // Use camelCase
       updatedAt: project.updatedAt  // Use camelCase
@@ -104,6 +105,7 @@ export async function createProject(
       title: validatedData.data.title,
       description: validatedData.data.description,
       icon: validatedData.data.icon,
+      image: validatedData.data.image || null,
       items: validatedData.data.items, // Ensure items are correctly formatted JSON for DB if needed
     }).returning(); // Add returning() to get the inserted project data
 
@@ -138,6 +140,110 @@ export async function createProject(
       success: false, 
       message: "An unexpected error occurred while creating the project.", 
       project: null 
+    };
+  }
+}
+
+/**
+ * Server action to delete a project by ID
+ * Only admins can delete projects
+ */
+export async function deleteProject(projectId: number) {
+  try {
+    // Check if the user is an admin
+    const userIsAdmin = await isAdmin();
+    if (!userIsAdmin) {
+      return { 
+        success: false, 
+        message: "Unauthorized. Only admins can delete projects." 
+      };
+    }
+
+    // Delete the project from the database
+    const deleted = await db
+      .delete(projects)
+      .where(eq(projects.id, projectId))
+      .returning();
+
+    if (!deleted || deleted.length === 0) {
+      return { 
+        success: false, 
+        message: "Project not found or already deleted." 
+      };
+    }
+
+    // Revalidate the path to update the cache
+    revalidatePath("/projects");
+
+    return { 
+      success: true, 
+      message: "Project deleted successfully!" 
+    };
+    
+  } catch (error) {
+    console.error("Error deleting project:", error);
+    return { 
+      success: false, 
+      message: "An unexpected error occurred while deleting the project." 
+    };
+  }
+}
+
+/**
+ * Server action to delete a project by title
+ * Only admins can delete projects
+ */
+export async function deleteProjectByTitle(title: string) {
+  try {
+    // Check if the user is an admin
+    const userIsAdmin = await isAdmin();
+    if (!userIsAdmin) {
+      return { 
+        success: false, 
+        message: "Unauthorized. Only admins can delete projects." 
+      };
+    }
+
+    // Find the project by title first
+    const projectToDelete = await db
+      .select()
+      .from(projects)
+      .where(eq(projects.title, title))
+      .limit(1);
+
+    if (!projectToDelete || projectToDelete.length === 0) {
+      return { 
+        success: false, 
+        message: `Project with title "${title}" not found.` 
+      };
+    }
+
+    // Delete the project from the database
+    const deleted = await db
+      .delete(projects)
+      .where(eq(projects.id, projectToDelete[0].id))
+      .returning();
+
+    if (!deleted || deleted.length === 0) {
+      return { 
+        success: false, 
+        message: "Failed to delete project." 
+      };
+    }
+
+    // Revalidate the path to update the cache
+    revalidatePath("/projects");
+
+    return { 
+      success: true, 
+      message: `Project "${title}" deleted successfully!` 
+    };
+    
+  } catch (error) {
+    console.error("Error deleting project:", error);
+    return { 
+      success: false, 
+      message: "An unexpected error occurred while deleting the project." 
     };
   }
 }

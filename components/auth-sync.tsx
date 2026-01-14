@@ -25,7 +25,10 @@ export function AuthSync() {
         const result = await syncUser();
         
         if (!result.success) {
-          console.error("Failed to sync user data:", result.error);
+          // Only log if it's an actual error, not just missing user
+          if (result.error !== "No authenticated user found") {
+            console.error("Failed to sync user data:", result.error);
+          }
         }
       } catch (error) {
         console.error("Error syncing user:", error);

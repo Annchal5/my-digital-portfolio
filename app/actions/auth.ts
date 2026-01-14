@@ -13,11 +13,12 @@ export async function syncUser() {
     // Get the current authenticated user from Clerk
     const user = await currentUser();
     
-    // If no user is authenticated, return error
+    // If no user is authenticated, silently return (user may not be signed in yet)
+    // This is normal and expected behavior
     if (!user || !user.emailAddresses || user.emailAddresses.length === 0) {
       return {
-        success: false,
-        error: "No authenticated user found"
+        success: true,
+        user: null
       };
     }
     
