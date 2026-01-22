@@ -4,6 +4,24 @@ import { db, subscribers } from "@/lib/db"
 import { eq } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import { ActionState, newsletterSubscriptionSchema } from "@/lib/types"
+import arcjet, { detectBot, slidingWindow } from "@arcjet/next"
+import { headers } from "next/headers"
+
+// Initialize Arcjet for newsletter signup protection
+const aj = arcjet({
+  key: process.env.ARCJET_API_KEY!,
+  rules: [
+    detectBot({
+      mode: "LIVE",
+      allow: [], // Block all bots
+    }),
+    slidingWindow({
+      mode: "LIVE",
+      interval: "1h", // 1 hour interval
+      max: 5, // Max 5 signup attempts per hour per IP
+    }),
+  ],
+});
 
 // Define the interface but don't export it directly
 interface NewsletterState extends ActionState {
@@ -27,6 +45,51 @@ export async function subscribeToNewsletter(
   prevState: NewsletterState,
   formData: FormData
 ): Promise<NewsletterState> {
+
+  // Get request details for Arcjet
+  const headersList = await headers();
+  const ip = headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "127.0.0.1";
+
+  // Create a mock request object for Arcjet
+  const request = new Request("https://your-domain.com/api/newsletter/subscribe", {
+    method: "POST",
+    headers: {
+      "x-forwarded-for": ip,
+      "user-agent": headersList.get("user-agent") || "",
+      "content-type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      email: formData.get("email") as string,
+      name: formData.get("name") as string,
+    }),
+  });
+
+  // Run Arcjet protection
+  const decision = await aj.protect(request);
+
+  if (decision.isDenied()) {
+    if (decision.reason.isRateLimit()) {
+      return {
+        status: "error",
+        message: "Too many signup attempts. Please try again later.",
+      };
+    } else if (decision.reason.isBot()) {
+      return {
+        status: "error",
+        message: "Signup blocked due to suspicious activity.",
+      };
+    } else if (decision.reason.isEmail()) {
+      return {
+        status: "error",
+        message: "Please use a valid email address.",
+      };
+    } else {
+      return {
+        status: "error",
+        message: "Signup blocked for security reasons.",
+      };
+    }
+  }
 
   // Parse the form data
   const email = formData.get("email") as string

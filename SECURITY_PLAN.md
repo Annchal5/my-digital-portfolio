@@ -28,8 +28,9 @@ This document outlines the security architecture, authentication mechanisms, and
 | Component | Technology | Purpose |
 |-----------|------------|---------|
 | Authentication | Clerk | User identity & session management |
+| Web Application Firewall | Arcjet | Bot protection, rate limiting, WAF |
 | Database | Neon (PostgreSQL) | Serverless PostgreSQL with SSL |
-| Framework | Next.js 14+ | Server components & middleware protection |
+| Framework | Next.js 16+ | Server components & proxy protection |
 | ORM | Drizzle | Type-safe database queries |
 | Hosting | Vercel (recommended) | Edge security & DDoS protection |
 
@@ -114,7 +115,81 @@ When a user logs in:
 
 ---
 
-## 🔒 Secrets Management
+## �️ Web Application Firewall (Arcjet)
+
+### Arcjet Integration
+
+Arcjet provides advanced security features including bot protection, rate limiting, and WAF capabilities. It's integrated at the proxy level to protect against common web threats.
+
+**Why Arcjet?**
+- ✅ **Bot Protection** - Detects and blocks malicious bots
+- ✅ **Rate Limiting** - Prevents abuse from excessive requests
+- ✅ **Email Validation** - Blocks disposable and invalid email addresses
+- ✅ **WAF Features** - Protects against common web attacks
+- ✅ **Real-time Analysis** - Edge-based security decisions
+
+### Arcjet Configuration
+
+```typescript
+// proxy.ts - Arcjet integration
+const aj = arcjet({
+  key: process.env.ARCJET_API_KEY!,
+  rules: [
+    protectSignup({
+      email: {
+        mode: "LIVE",
+        block: ["DISPOSABLE", "INVALID", "NO_MX_RECORDS"],
+      },
+      bots: {
+        mode: "LIVE",
+        allow: [], // Block all bots from signup
+      },
+      rateLimit: {
+        mode: "LIVE",
+        window: "1m",
+        max: 3, // Max 3 signup attempts per minute per IP
+      },
+    }),
+  ],
+});
+```
+
+### Protected Endpoints
+
+| Endpoint | Protection | Rate Limit |
+|----------|------------|------------|
+| Newsletter Signup | Email validation + Bot protection | 5/hour per IP |
+| API Routes | General WAF + Rate limiting | Configurable |
+| Admin Routes | Clerk auth + Arcjet WAF | 100/hour per IP |
+
+### Arcjet Security Features
+
+#### Bot Protection
+- **Automated Detection** - Identifies bots via behavior analysis
+- **Allow Lists** - Configurable bot allowances
+- **Real-time Blocking** - Immediate response to detected threats
+
+#### Rate Limiting
+- **Sliding Window** - Time-based rate limiting
+- **IP-based Tracking** - Per-IP address limits
+- **Customizable Windows** - Flexible time periods (1m, 1h, 1d)
+
+#### Email Validation
+- **Disposable Email Blocking** - Prevents temporary email abuse
+- **Domain Validation** - Checks MX records
+- **Invalid Email Detection** - Real-time validation
+
+### Monitoring & Alerts
+
+Arcjet provides real-time monitoring through their dashboard:
+- Request analysis and blocking statistics
+- Geographic distribution of threats
+- Custom alert configurations
+- Integration with security tools
+
+---
+
+## �🔒 Secrets Management
 
 ### Environment Variables
 
@@ -129,7 +204,10 @@ The application uses the following secrets:
 │  ├── NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY   [Public - Safe]       │
 │  └── CLERK_SECRET_KEY                    [Secret - Protect!]   │
 │                                                                 │
-│  🗄️ DATABASE (Neon)                                             │
+│  �️ SECURITY (Arcjet)                                           │
+│  └── ARCJET_API_KEY                       [Secret - Protect!]   │
+│                                                                 │
+│  �🗄️ DATABASE (Neon)                                             │
 │  └── DATABASE_URL                        [Secret - Protect!]   │
 │      OR individual variables:                                   │
 │      ├── PGHOST                                                 │
@@ -150,6 +228,7 @@ The application uses the following secrets:
 | Variable | Classification | Exposure Risk |
 |----------|---------------|---------------|
 | `CLERK_SECRET_KEY` | 🔴 **CRITICAL** | Full account compromise |
+| `ARCJET_API_KEY` | 🔴 **CRITICAL** | Security bypass & abuse |
 | `DATABASE_URL` | 🔴 **CRITICAL** | Database access & data breach |
 | `PGPASSWORD` | 🔴 **CRITICAL** | Database access |
 | `NEXT_PUBLIC_*` | 🟢 **PUBLIC** | Safe for client exposure |
@@ -265,7 +344,8 @@ users (
 
 ### Pre-Deployment
 
-- [ ] All `CLERK_SECRET_KEY` values set in production
+- [x] All `CLERK_SECRET_KEY` values set in production
+- [x] `ARCJET_API_KEY` configured for security protection
 - [ ] `DATABASE_URL` configured for production database
 - [ ] `.env` file NOT committed to repository
 - [ ] SSL certificates valid for custom domain
