@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 import { AuthSync } from "@/components/auth-sync";
+import { Chatbot } from "@/components/chatbot";
 // import {
 //   SignInButton,
 //   SignUpButton,
@@ -40,6 +41,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <Toaster />
+            <Chatbot />
           </div>
         </ThemeProvider>
       </body>

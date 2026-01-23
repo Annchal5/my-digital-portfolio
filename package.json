@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build --turbo",
     "start": "next start",
     "lint": "eslint app components lib hooks --ignore-pattern node_modules/",
