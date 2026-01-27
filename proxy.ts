@@ -11,16 +11,20 @@ const isProtectedRoute = createRouteMatcher([
 const aj = arcjet({
   key: process.env.ARCJET_API_KEY!,
   rules: [
-    // Bot detection
+    // Bot detection - allow some legitimate bots
     detectBot({
       mode: "LIVE",
-      allow: [], // Block all bots
+      allow: [
+        "CATEGORY:SEARCH_ENGINE", // Allow search engines like Google, Bing
+        "CATEGORY:PREVIEW", // Allow link previews
+        "CATEGORY:MONITORING", // Allow uptime monitors
+      ],
     }),
-    // Rate limiting for all requests
+    // Rate limiting for all requests - increased for production
     slidingWindow({
       mode: "LIVE",
       interval: "1m", // 1 minute
-      max: 100, // Max 100 requests per minute per IP
+      max: 500, // Increased to 500 requests per minute per IP
     }),
   ],
 });
