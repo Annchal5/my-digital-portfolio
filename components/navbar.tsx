@@ -8,8 +8,7 @@ import { Menu, Shield, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { cn } from "@/lib/utils";
-import { useAdmin } from "@/hooks/use-admin";
+import { Logo } from "./logo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -40,7 +39,7 @@ export default function Navbar() {
       <div className="container px-4 sm:px-6 lg:px-8 flex h-14 sm:h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
-            <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+            <Logo size="sm" showText={false} />
             <span className="text-foreground">Anchal</span>
           </Link>
         </div>        {/* Desktop Navigation */}

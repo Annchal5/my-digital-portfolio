@@ -21,7 +21,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CyberShield | Cybersecurity Portfolio",
   description: "Professional portfolio showcasing expertise in cybersecurity",
-    generator: 'v0.dev'
+  icons: {
+    icon: '/favicon.svg',
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

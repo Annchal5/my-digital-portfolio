@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Shield, Linkedin, Mail, MapPin } from "lucide-react"
+import { Logo } from "./logo"
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
+              <Logo size="sm" showText={false} />
               <span className="text-lg font-bold">Anchal</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">

@@ -1,0 +1,67 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background shield -->
+  <path d="M100 20 L160 50 L160 120 Q160 150 140 165 Q120 180 100 180 Q80 180 60 165 Q40 150 40 120 L40 50 Z"
+        fill="url(#shieldGradient)"
+        stroke="#1e3a8a"
+        stroke-width="2"/>
+
+  <!-- Inner shield border -->
+  <path d="M100 30 L150 55 L150 115 Q150 140 135 152 Q120 165 100 165 Q80 165 65 152 Q50 140 50 115 L50 55 Z"
+        fill="none"
+        stroke="#60a5fa"
+        stroke-width="1"
+        opacity="0.6"/>
+
+  <!-- Lock body -->
+  <rect x="85" y="110" width="30" height="25" rx="3" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+  <rect x="87" y="112" width="26" height="18" rx="2" fill="#6b7280" stroke="#4b5563" stroke-width="1"/>
+
+  <!-- Lock shackle -->
+  <path d="M95 110 Q95 105 100 105 Q105 105 105 110"
+        fill="none"
+        stroke="#374151"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- Keyhole -->
+  <circle cx="100" cy="120" r="3" fill="#1f2937"/>
+  <rect x="99" y="120" width="2" height="6" fill="#1f2937"/>
+
+  <!-- Network nodes -->
+  <circle cx="70" cy="70" r="4" fill="url(#accentGradient)" stroke="#92400e" stroke-width="1"/>
+  <circle cx="130" cy="70" r="4" fill="url(#accentGradient)" stroke="#92400e" stroke-width="1"/>
+  <circle cx="100" cy="90" r="4" fill="url(#accentGradient)" stroke="#92400e" stroke-width="1"/>
+  <circle cx="85" cy="75" r="3" fill="#fbbf24" stroke="#92400e" stroke-width="1"/>
+  <circle cx="115" cy="75" r="3" fill="#fbbf24" stroke="#92400e" stroke-width="1"/>
+
+  <!-- Connection lines -->
+  <line x1="70" y1="70" x2="85" y2="75" stroke="#fbbf24" stroke-width="2" opacity="0.8"/>
+  <line x1="85" y1="75" x2="100" y2="90" stroke="#fbbf24" stroke-width="2" opacity="0.8"/>
+  <line x1="100" y1="90" x2="115" y2="75" stroke="#fbbf24" stroke-width="2" opacity="0.8"/>
+  <line x1="115" y1="75" x2="130" y2="70" stroke="#fbbf24" stroke-width="2" opacity="0.8"/>
+  <line x1="70" y1="70" x2="100" y2="90" stroke="#fbbf24" stroke-width="1" opacity="0.6"/>
+  <line x1="130" y1="70" x2="100" y2="90" stroke="#fbbf24" stroke-width="1" opacity="0.6"/>
+
+  <!-- Text "CyberShield" -->
+  <text x="100" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">
+    CyberShield
+  </text>
+
+  <!-- Subtle glow effect -->
+  <path d="M100 20 L160 50 L160 120 Q160 150 140 165 Q120 180 100 180 Q80 180 60 165 Q40 150 40 120 L40 50 Z"
+        fill="none"
+        stroke="#3b82f6"
+        stroke-width="1"
+        opacity="0.3"/>
+</svg>
