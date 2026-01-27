@@ -119,6 +119,18 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold">Master of Information Technology (Cybersecurity)</h3>
                     <p className="text-sm text-primary font-medium">Asia Pacific International College, Melbourne • 2025–2026 (Expected)</p>
                     <p className="text-sm text-muted-foreground mt-2">Practical, industry-focused coursework and applied projects in cloud security, data privacy, threat mitigation and incident response.</p>
+                    <p className="text-sm text-muted-foreground mt-3 font-medium">Academic Achievements:</p>
+                    <ul className="text-sm text-muted-foreground mt-1 space-y-1">
+                      <li className="flex items-center gap-2">
+                        <Award className="h-4 w-4 text-primary" />
+                        <span>High Distinction (HD) in core technical and system design subjects</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Award className="h-4 w-4 text-primary" />
+                        <span>Distinction (D) across multiple cybersecurity and IT units</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-muted-foreground mt-3">Key focus: cloud security, data privacy, threat mitigation, incident response, and secure systems design.</p>
                     <p className="text-sm text-muted-foreground mt-3">Active in workshops, industry projects and building a live cybersecurity portfolio to bridge academic learning with real-world consulting expectations.</p>
                   </div>
                 </div>
@@ -133,7 +145,8 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold">Bachelor of Technology (Computer Science & Engineering)</h3>
                     <p className="text-sm text-primary font-medium">Guru Nanak Dev University, Amritsar • 2018–2022</p>
                     <p className="text-sm text-muted-foreground mt-2">Built a strong foundation in programming, data structures, databases, networks and operating systems through applied coursework and capstone projects.</p>
-                    <p className="text-sm text-muted-foreground mt-3 font-medium">Key focus: programming fundamentals, system design, networking basics, database concepts, and applied problem-solving.</p>
+                    <p className="text-sm text-muted-foreground mt-3 font-medium">Academic Achievement: <span className="text-primary font-semibold">8.1 CGPA out of 10</span></p>
+                    <p className="text-sm text-muted-foreground mt-3">Key focus: programming fundamentals, system design, networking basics, database concepts, and applied problem-solving.</p>
                   </div>
                 </div>
               </Card>

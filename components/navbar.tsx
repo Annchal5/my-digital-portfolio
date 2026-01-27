@@ -9,6 +9,8 @@ import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Logo } from "./logo";
+import { cn } from "@/lib/utils";
+import { useAdmin } from "@/hooks/use-admin";
 
 export default function Navbar() {
   const pathname = usePathname();
