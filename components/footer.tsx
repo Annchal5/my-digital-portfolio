@@ -21,7 +21,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-2">
               <Link 
-                href="https://www.linkedin.com/in/annchal-634291178/" 
+                href="https://www.linkedin.com/in/anchhal-634291178/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -107,7 +107,7 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="https://www.linkedin.com/in/annchal-634291178/"
+                  href="https://www.linkedin.com/in/anchhal-634291178/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"

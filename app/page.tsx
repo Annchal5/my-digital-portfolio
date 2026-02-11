@@ -633,7 +633,7 @@ export default async function Home() {
                   </a>
                   
                   <Link 
-                    href="https://www.linkedin.com/in/annchal-634291178/"
+                    href="https://www.linkedin.com/in/anchhal-634291178/"
                     target="_blank"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                   >
@@ -651,7 +651,7 @@ export default async function Home() {
                   </div>
                 </div>
 
-                <a href="/Anchal_Resume.pdf" download="Anchal_Resume.pdf" className="block">
+                <a href="/Anchhal..Resume.pdf" download="Anchhal..Resume.pdf" className="block">
                   <Button variant="outline" size="lg" className="w-full min-h-[48px] gap-2">
                     <Download className="h-5 w-5" />
                     Download Resume

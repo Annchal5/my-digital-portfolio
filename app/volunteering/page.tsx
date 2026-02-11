@@ -22,10 +22,10 @@ export default function VolunteeringPage() {
                   </div>
                   <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full mb-2">Student Ambassador</div>
                   <h3 className="text-xl font-bold">Ausbiz Consulting</h3>
-                  <p className="text-primary font-medium">Nov 2025 - Present</p>
+                  <p className="text-primary font-medium">Nov 2025 - Feb 2026</p>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                     <Calendar className="h-4 w-4" />
-                    <span>Nov 2025 - Present</span>
+                    <span>Nov 2025 - Feb 2026</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
                     <Briefcase className="h-4 w-4" />

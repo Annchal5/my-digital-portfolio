@@ -58,7 +58,7 @@ const responses = {
     type: 'text' as const
   },
   "Contact information": {
-    text: "I'd love to discuss how I can help secure your organization! Here are the best ways to reach me:\n\n📧 **Email**: anchal1234asr@gmail.com\n💼 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/annchal-634291178/)\n📱 **Phone**: Available upon request\n🌐 **Portfolio**: You're here! (cybersecurity portfolio)\n\nI'm actively seeking cybersecurity opportunities in Australia and respond within 24 hours. Whether you need DLP implementation, cloud security, or AI protection - I'm here to help!\n\nFeel free to reach out for a consultation or to discuss your specific security needs.",
+    text: "I'd love to discuss how I can help secure your organization! Here are the best ways to reach me:\n\n📧 **Email**: anchal1234asr@gmail.com\n💼 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/anchhal-634291178/)\n📱 **Phone**: Available upon request\n🌐 **Portfolio**: You're here! (cybersecurity portfolio)\n\nI'm actively seeking cybersecurity opportunities in Australia and respond within 24 hours. Whether you need DLP implementation, cloud security, or AI protection - I'm here to help!\n\nFeel free to reach out for a consultation or to discuss your specific security needs.",
     type: 'contact' as const
   },
   "More about DLP services": {

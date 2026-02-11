@@ -119,6 +119,7 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold">Master of Information Technology (Cybersecurity)</h3>
                     <p className="text-sm text-primary font-medium">Asia Pacific International College, Melbourne • 2025–2026 (Expected)</p>
                     <p className="text-sm text-muted-foreground mt-2">Practical, industry-focused coursework and applied projects in cloud security, data privacy, threat mitigation and incident response.</p>
+                    <p className="text-sm text-primary font-medium mt-1">GPA: <span className="font-semibold">6.5 / 7</span></p>
                     <p className="text-sm text-muted-foreground mt-3 font-medium">Academic Achievements:</p>
                     <ul className="text-sm text-muted-foreground mt-1 space-y-1">
                       <li className="flex items-center gap-2">
@@ -722,7 +723,7 @@ export default function AboutPage() {
             {/* Contact Links */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link 
-                href="https://www.linkedin.com/in/annchal-634291178/" 
+                href="https://www.linkedin.com/in/anchhal-634291178/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
